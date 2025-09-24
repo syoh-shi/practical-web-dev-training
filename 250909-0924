@@ -1,0 +1,38 @@
+# CSS Positioning Summary (9/9 + 9/24)
+
+## Positioning Types
+
+### 1. Static
+- **Definition**: Default positioning of HTML elements.  
+- **Behavior**: Elements follow the natural flow of the document.  
+- **Notes**: No `top`, `right`, `bottom`, or `left` values apply.
+
+---
+
+### 2. Relative
+- **Definition**: Position relative to its **default (static) position**.  
+- **Behavior**: Shifts element without affecting surrounding elements' layout.  
+- **Use Case**: Often used as a reference container for absolutely positioned child elements.
+
+---
+
+### 3. Absolute
+- **Definition**: Position relative to the **nearest positioned ancestor** (non-static).  
+- **Fallback**: If no ancestor is positioned, it uses the **top-left corner of the page**.  
+- **Behavior**: Removed from the normal document flow.
+
+---
+
+### 4. Fixed
+- **Definition**: Position relative to the **browser window (viewport)**.  
+- **Behavior**: Stays in place even when the page is scrolled.  
+- **Common Use**: Sticky headers, floating action buttons.
+
+---
+
+## Z-index
+- **Purpose**: Controls stacking order of elements.  
+- **Behavior**: Higher `z-index` → element appears **in front** of lower values.  
+- **Notes**:
+  - Only applies to positioned elements (`relative`, `absolute`, `fixed`, `sticky`).
+  - Default value is `auto`.
